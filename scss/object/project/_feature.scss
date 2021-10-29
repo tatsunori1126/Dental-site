@@ -1,41 +1,70 @@
 @charset "UTF-8";
+@use "../../foundation/mixin";
 .p-main__feature {
     background-image: url(/images/背景.png);
-    height: 817px;
     width: 100%;
     background-size: cover;
+    @include mixin.pc {
+        height: 817px;
+    }
     &-sub {
-        max-width: 1440px;
-        margin: 0 auto;
         text-align: center;
-        .section-feature-title {
+        margin: 0 20px;
+        @include mixin.pc {
+            max-width: 1440px;
+            margin: 0 auto;
             text-align: center;
-            padding-top: 130px;
-            margin-bottom: 62px;
-            font-size: 27px;
+        }
+        .section-feature-title {
+            font-size: 22px;
+            padding-top: 75px;
+            text-align: center;
+            margin-bottom: 53px;
+            @include mixin.pc {
+                padding-top: 130px;
+                margin-bottom: 62px;
+                font-size: 27px;
+            }
         }
         .p-main__feature-box {
-            display: flex;
-            justify-content: center;
-            text-align: center;
+            @include mixin.pc {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
             .p-main__feature-block {
                 background-color: #FFFFFF;
+                width: 86%;
+                margin: 0 auto 70px;
                 height: 355px;
-                width: 20%;
+                @include mixin.pc {
+                    width: 20%;
+                    margin: 0;
+                }
                 .p-main__feature-block-title {
-                    margin-top: 50px;
+                    padding-top: 50px;
                     font-size: 18px;
+                    @include mixin.pc {
+                        margin-top: 50px;
+                        padding-top: 0;
+                    }
                 }
                 .p-main__feature-text {
                     line-height: 25px;
                     margin-top: 20px;
-                    font-size: 1vw;
                     padding: 0 35px;
                     white-space: nowrap;
+                    font-size: 15px;
+                    @include mixin.pc {
+                        font-size: 1vw;
+                    }
                 }
                 img {
                     margin-top: 20px;
                 }
+            }
+            .p-main__feature-block:nth-child(3) {
+                margin-bottom: 0;
             }
             .p-main__feature-block-left {
                 position: relative;
@@ -68,8 +97,10 @@
                 }
             }
             .p-main__feature-block-center {
-                margin: 0 105px;
                 position: relative;
+                @include mixin.pc {
+                    margin: 0 105px;
+                }
                 .p-main__number-img {
                     background-image: url(/images/Vector.png);
                     position: absolute;
@@ -132,7 +163,8 @@
         .p-main__feature-btn {
             display: inline-block;
             height: 60px;
-            width: 27%;
+            width: 100%;
+            font-size: 14px;
             background-color: #FFFFFF;
             border: 2px solid #51A8BB;
             box-sizing: border-box;
@@ -140,8 +172,15 @@
             border-radius: 10px;
             line-height: 60px;
             text-align: center;
-            margin-top: 55px;
             color: #51A8BB;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            @include mixin.pc {
+                margin-top: 55px;
+                width: 27%;
+                font-size: 16px;
+                margin-bottom: 0;
+            }
         }
     }
 }

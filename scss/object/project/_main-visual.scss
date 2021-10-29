@@ -6,7 +6,7 @@
         background-image: url(/images/Rectangle\ 2.png);
         background-size: cover;
         background-position: center;
-        position: relative;
+        // position: relative;
         height: 471px;
         width: 100%;
         @include mixin.pc {
@@ -41,9 +41,15 @@
             }
         }
         .p-main__top-table {
-            position: absolute;
-            top: 455px;
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 400px;
+            position: relative;
             @include mixin.pc {
+                position:absolute;
+                padding-top: 0;
+                margin: 0;
+                width: inherit;
                 top: 552px;
                 left: 152px;
             }
@@ -77,7 +83,10 @@
                 .business-hours {
                     color: #000000;
                     background-color: #FEFEFE;
-                    height: 56px;
+                    height: 42px;
+                    @include mixin.pc {
+                        height: 56px;
+                    }
                     .space {
                         width: 100px;
                         @include mixin.pc {

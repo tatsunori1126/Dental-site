@@ -4,11 +4,18 @@
     width: 100%;
     background-color: #E9F2F4;
     &-block { 
-        max-width: 1440px;
-        margin: 0 auto;
+        background-size: contain;
+        height: auto;
+        margin: 0 20px;
         text-align: center;
         background-image: url(/images/811926\ 1.png);
-        background-position: center top 12px;
+        background-position: center top 243px;
+        @include mixin.pc {
+            max-width: 1440px;
+            margin: 0 auto;
+            background-position: center top 12px;
+            background-size: inherit;
+        }
         .section-information-title {
             padding-top: 103px;
             margin-bottom: 40px;
@@ -20,18 +27,41 @@
             }
         }
         .section-information-text-top {
-            line-height: 36px;
-            margin-bottom: 16px;
-            font-size: 22px;
+            line-height: 28px;
+            font-size: 18px;
+            padding: 0 20px;
+            margin-bottom: 41px;
+            @include mixin.pc {
+                line-height: 36px;
+                margin-bottom: 16px;
+                font-size: 22px;
+            }
         }
         img {
-            width: auto;
-            height: 250px;
+            width: 94%;
+            height: auto;
             object-fit: cover;
-            margin-bottom: 85px;
+            margin-bottom: 42px;
+            @include mixin.pc {
+                width: 35%;
+                margin-bottom: 85px;
+            }
         }
         .section-information-text-bottom {
-            line-height: 32px;
+            font-size: 14px;
+            line-height: 28px;
+            text-align: left;
+            @include mixin.pc {
+                text-align: center;
+                font-size: 16px;
+                line-height: 32px;
+            }
+            br {
+                display: none;
+                @include mixin.pc {
+                    display: block;
+                }
+            }
         }
         .p-main__information-detail {
             cursor: pointer;
@@ -40,13 +70,20 @@
             border: 2px solid #51A8BB;
             height: 60px;
             display: inline-block;
-            width: 27%;
-            margin-top: 35px;
-            margin-bottom: 25px;
+            width: 100%;
             line-height: 60px;
             box-sizing: border-box;
             box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.15);
             color: #51A8BB;
+            margin-top: 40px;
+            margin-bottom: 37px;
+            font-size: 14px;
+            @include mixin.pc {
+                width: 27%;
+                margin-top: 35px;
+                margin-bottom: 25px;
+                font-size: 16px;
+            }
         }
     }
 }
