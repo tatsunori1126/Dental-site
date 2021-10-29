@@ -1,0 +1,147 @@
+@charset "UTF-8";
+.p-main__feature {
+    background-image: url(/images/背景.png);
+    height: 817px;
+    width: 100%;
+    background-size: cover;
+    &-sub {
+        max-width: 1440px;
+        margin: 0 auto;
+        text-align: center;
+        .section-feature-title {
+            text-align: center;
+            padding-top: 130px;
+            margin-bottom: 62px;
+            font-size: 27px;
+        }
+        .p-main__feature-box {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            .p-main__feature-block {
+                background-color: #FFFFFF;
+                height: 355px;
+                width: 20%;
+                .p-main__feature-block-title {
+                    margin-top: 50px;
+                    font-size: 18px;
+                }
+                .p-main__feature-text {
+                    line-height: 25px;
+                    margin-top: 20px;
+                    font-size: 1vw;
+                    padding: 0 35px;
+                    white-space: nowrap;
+                }
+                img {
+                    margin-top: 20px;
+                }
+            }
+            .p-main__feature-block-left {
+                position: relative;
+                .p-main__number-img {
+                    background-image: url(/images/Vector.png);
+                    position: absolute;
+                    height: 72px;
+                    width: 90px;
+                    top: -22px;
+                    left: -34px;
+                    .p-main__number {
+                        position: absolute;
+                        top: 13px;
+                        left: 22px;
+                        font-size: 32px;
+                        color: #FFFFFF;
+                    }
+                    .p-main__mark-other-1 {
+                        position: absolute;
+                        top: -37px;
+                        left: -11px;
+                        border: 1.5px;
+                    }
+                    .p-main__mark-other-2 {
+                        position: absolute;
+                        top: -40px;
+                        left: 6px;
+                        border: 1.5px;
+                    }
+                }
+            }
+            .p-main__feature-block-center {
+                margin: 0 105px;
+                position: relative;
+                .p-main__number-img {
+                    background-image: url(/images/Vector.png);
+                    position: absolute;
+                    height: 72px;
+                    width: 90px;
+                    top: -22px;
+                    left: -34px;
+                    .p-main__number {
+                        position: absolute;
+                        top: 13px;
+                        left: 22px;
+                        font-size: 32px;
+                        color: #FFFFFF;
+                    }
+                    .p-main__mark-other-1 {
+                        position: absolute;
+                        top: -37px;
+                        left: -11px;
+                        border: 1.5px;
+                    }
+                    .p-main__mark-other-2 {
+                        position: absolute;
+                        top: -40px;
+                        left: 6px;
+                        border: 1.5px;
+                    }
+                }
+            }
+            .p-main__feature-block-right {
+                position: relative;
+                .p-main__number-img {
+                    background-image: url(/images/Vector.png);
+                    position: absolute;
+                    height: 72px;
+                    width: 90px;
+                    top: -22px;
+                    left: -34px;
+                    .p-main__number {
+                        position: absolute;
+                        top: 13px;
+                        left: 22px;
+                        font-size: 32px;
+                        color: #FFFFFF;
+                    }
+                    .p-main__mark-other-1 {
+                        position: absolute;
+                        top: -37px;
+                        left: -11px;
+                        border: 1.5px;
+                    }
+                    .p-main__mark-other-2 {
+                        position: absolute;
+                        top: -40px;
+                        left: 6px;
+                        border: 1.5px;
+                    }
+                }
+            }
+        }
+        .p-main__feature-btn {
+            display: inline-block;
+            height: 60px;
+            width: 27%;
+            background-color: #FFFFFF;
+            border: 2px solid #51A8BB;
+            box-sizing: border-box;
+            box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            line-height: 60px;
+            text-align: center;
+            margin-top: 55px;
+            color: #51A8BB;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__information {
+    width: 100%;
+    background-color: #E9F2F4;
+    &-block { 
+        max-width: 1440px;
+        margin: 0 auto;
+        text-align: center;
+        background-image: url(/images/811926\ 1.png);
+        background-position: center top 12px;
+        .section-information-title {
+            padding-top: 103px;
+            margin-bottom: 40px;
+            font-size: 22px;
+            @include mixin.pc {
+                margin-bottom: 50px;
+                padding-top: 13px;
+                font-size: 27px;
+            }
+        }
+        .section-information-text-top {
+            line-height: 36px;
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
+        img {
+            width: auto;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 85px;
+        }
+        .section-information-text-bottom {
+            line-height: 32px;
+        }
+        .p-main__information-detail {
+            cursor: pointer;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            border: 2px solid #51A8BB;
+            height: 60px;
+            display: inline-block;
+            width: 27%;
+            margin-top: 35px;
+            margin-bottom: 25px;
+            line-height: 60px;
+            box-sizing: border-box;
+            box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.15);
+            color: #51A8BB;
+        }
+    }
+}

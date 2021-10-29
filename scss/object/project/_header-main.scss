@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+
+.p-header {
+    margin: 0 20px;
+    height: 100%;
+    @include mixin.pc {
+        max-width: 1440px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    &__title-logo {
+        @include mixin.pc {
+            margin: 0 0 0 20px;
+        }
+        @include mixin.pc {
+            margin: 18px 5px 0 140px;
+        }
+        a {
+            img {
+                height: 56px;
+                width: auto;
+                @include mixin.pc {
+                    height: inherit;
+                    width: inherit;
+                }
+            }
+        }
+    }
+    &__nav {
+        display: none;
+        @include mixin.pc {
+            display: flex;
+            margin: 54px 0 0 0;
+        }
+        &-list {
+            margin: 0 35px;
+            a {
+                font-size: 18px;
+            }
+        }
+        .separation {
+            position: relative;
+        }
+        .separation::before {
+            content: ""; 
+            display: block;
+            width: 1.5px; 
+            height: 46px; 
+            background-color: #000000; 
+            position: absolute;
+            top: -9px;
+            left: -35px; 
+        }
+    }
+    &__tell-box {
+        display: none;
+        @include mixin.pc {
+            display: block;
+            margin-left: 5px;
+        }
+        .tell-number {
+            display: inline-block;
+            border-radius: 10px;
+            background-color: #EEC4BD;
+            padding: 9px 53px;
+            margin: 25px 140px 8px 0;
+            font-size: 20px;
+            letter-spacing: 0.04em;
+            .fa-phone-alt {
+                font-family: "Font Awesome 5 Free"; //Font Awesomeバージョン5のフリー版
+                content: "\f879";   //アイコンの決められたコード
+                font-weight: 900;
+                color: #000;    //カラーを指定しないとアイコンが透過されて見えない
+                margin-right: 8px;
+            }
+        }
+        .business-hours {
+            font-size: 18px;
+            margin-left: 28px;
+            letter-spacing: 0.04em;
+            .fa-clock {
+                font-family: "Font Awesome 5 Free"; //Font Awesomeバージョン5のフリー版
+                content: "\f017";   //アイコンの決められたコード
+                font-weight: 900;
+                color: #000000;    //カラーを指定しないとアイコンが透過されて見えない
+                margin-right: 8px;
+            }
+        }
+    }
+}

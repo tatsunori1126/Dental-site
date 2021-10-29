@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main {
+    width: 100%;
+    &__top-visual {
+        background-image: url(/images/Rectangle\ 2.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 471px;
+        width: 100%;
+        @include mixin.pc {
+            height: 760px;
+            background-position: inherit;
+        }
+        .p-main__top-text {
+            font-size: 25px;
+            line-height: 35px;
+            color: #188FA9;
+            font-weight: normal;
+            float: right;
+            margin-top: 50px;
+            @include mixin.pc {
+                position: absolute;
+                top: 130px;
+                left: 164px;
+                float: none;
+                margin-top: 0;
+            }
+            @include mixin.pc {
+                top: 395px;
+                left: 180px;
+                font-size: 35px;
+                line-height: 56px;
+            }
+            span {
+                font-size: 20px;
+                @include mixin.pc {
+                    font-size: 30px;
+                }
+            }
+        }
+        .p-main__top-table {
+            position: absolute;
+            top: 455px;
+            @include mixin.pc {
+                top: 552px;
+                left: 152px;
+            }
+            table {
+                border-spacing: 0;
+                font-weight: normal;
+                font-size: 14px;
+                @include mixin.pc {
+                    font-size: 16px;
+                }
+                .reception-time {
+                    height: 42px;
+                    background-color: #51A8BB;
+                    color: #FEFEFE;
+                    @include mixin.pc {
+                        height: 56px;
+                    }
+                    .space {
+                        width: 100px;
+                        @include mixin.pc {
+                            width: 150px;
+                        }
+                    }
+                    th {
+                        width: 50px;
+                        @include mixin.pc {
+                            width: 60px;
+                        }
+                    }
+                }
+                .business-hours {
+                    color: #000000;
+                    background-color: #FEFEFE;
+                    height: 56px;
+                    .space {
+                        width: 100px;
+                        @include mixin.pc {
+                            width: 150px;
+                        }
+                    }
+                    td {
+                        width: 50px;
+                        text-align: center;
+                        @include mixin.pc {
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // &__top-visual::before {
+    //     background-image: url(/images/Vector\ 16.png);
+    //     background-position: top;
+    //     bottom: 0;
+    //     content: '';
+    //     left: 0;
+    //     height: 100%;
+    //     position: absolute;
+    //     width: 100%;
+    // }
+    // &__top-visual::after {
+    //     background-image: url(/images/wave.svg);
+    //     background-position: bottom;
+    //     bottom: 0;
+    //     content: '';
+    //     left: 0;
+    //     height: 100%;
+    //     position: absolute;
+    //     width: 100%;
+    // }
+}

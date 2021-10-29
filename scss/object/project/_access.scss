@@ -1,0 +1,146 @@
+@charset "UTF-8";
+.p-main__access {
+    width: 100%;
+    &-sub {
+        max-width: 1440px;
+        text-align: center;
+        margin: 0 auto;
+        .section__access-title {
+            margin-bottom: 50px;
+            padding-top: 66px;
+            font-size: 27px;
+        }
+        .p-main__access-map-img {
+            width: 80%;
+            height: 350px;
+            object-fit: cover;
+            margin-bottom: 66px;
+        }
+        .p-main__access-box {
+            display: flex;
+            justify-content: center;
+            .p-main__access-map {
+                text-align: left;
+                img {
+                    width: 282px;
+                    height: 33px;
+                }
+                .p-main__address {
+                    margin: 10px 0 20px 0;
+                }
+                .p-main__access-text {
+                    line-height: 32px;
+                }
+                a {
+                    height: 60px;
+                    width: 397px;
+                    background-color: #51A8BB;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 60px;
+                    border-radius: 10px;
+                    box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.15);
+                    margin: 15px 0 93px 0;
+                    .fa-map-marker-alt {
+                        font-family: "Font Awesome 5 Free"; //Font Awesomeバージョン5のフリー版
+                        content: "\f3c5";   //アイコンの決められたコード
+                        font-weight: 900;
+                        color: #000000;    //カラーを指定しないとアイコンが透過されて見えない
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .p-main__access-table {
+                margin-left: 77px;
+                margin-top: 12px;
+                table {
+                    border-spacing: 0;
+                    font-weight: normal;
+                    .reception-time {
+                        background-color: #51A8BB;
+                        color: #FEFEFE;
+                        height: 56px;
+                        .space {
+                            width: 150px;
+                        }
+                        th {
+                            width: 60px;
+                        }
+                    }
+                    .business-hours {
+                        color: #000000;
+                        background-color: #E9F2F4;
+                        height: 56px;
+                        .space {
+                            width: 100px;
+                        }
+                        td {
+                            width: 60px;
+                            text-align: center;
+                        }
+                    }
+                }
+                .p-main__access-table-text {
+                    text-align: left;
+                    margin-top: 15px;
+                }
+            }
+        }
+        .p-main__access-dentist {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-img {
+                margin-right: 48px;
+            }
+            .p-main__access-reserve {
+                margin-top: 20px;
+                .p-main__access-tell-box {
+                    .p-main__access-reserve-tell {
+                        display: inline-block;
+                        width: 480px;
+                        height: 76px;
+                        background-color: #EEC4BD;
+                        border-radius: 10px;
+                        line-height: 76px;
+                        font-size: 23px;
+                        margin-bottom: 28px;
+                        border-radius: 10px;
+                        box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.15);
+                        .fa-phone-alt {
+                            font-family: "Font Awesome 5 Free"; //Font Awesomeバージョン5のフリー版
+                            content: "\f879";   //アイコンの決められたコード
+                            font-weight: 900;
+                            color: #000000;    //カラーを指定しないとアイコンが透過されて見えない
+                            margin-right: 42px;
+                        }
+                    }
+                }
+                .p-main__access-net-box {
+                    .p-main__access-reserve-net {
+                        display: inline-block;
+                        width: 480px;
+                        height: 76px;
+                        background-color: #EEC4BD;
+                        border-radius: 10px;
+                        line-height: 76px;
+                        font-size: 20px;
+                        border-radius: 10px;
+                        box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.15);
+                        .fa-desktop {
+                            font-family: "Font Awesome 5 Free"; //Font Awesomeバージョン5のフリー版
+                            content: "\f108";   //アイコンの決められたコード
+                            font-weight: 900;
+                            color: #000000;    //カラーを指定しないとアイコンが透過されて見えない
+                            margin-right: 29px;
+                        }
+                    }
+                }
+                .p-main__access-reserve-caution {
+                    margin-top: 28px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
