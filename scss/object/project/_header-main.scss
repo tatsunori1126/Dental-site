@@ -2,18 +2,17 @@
 @use "../../foundation/mixin";
 
 .p-header {
-    margin: 0 20px;
     height: 100%;
+    position: relative;
     @include mixin.pc {
         max-width: 1440px;
         display: flex;
         justify-content: center;
         margin: 0 auto;
+        position: inherit;
     }
     &__title-logo {
-        @include mixin.pc {
-            margin: 0 0 0 20px;
-        }
+        margin: 0 0 0 20px;
         @include mixin.pc {
             margin: 18px 5px 0 140px;
         }
@@ -28,30 +27,80 @@
             }
         }
     }
-    &__nav {
+    &__nav-res {
+        display: none;
+        background-color: #E9F2F4;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        text-align: center;
+        z-index: 5;
+        @include mixin.pc {
+            display: none;
+        }
+        .p-header__nav-box {
+            background-color: #E9F2F4;
+            @include mixin.pc {
+                display: none;
+            }
+            .p-header__nav-list {
+                margin: 20px 0;
+                @include mixin.pc {
+                    display: none;
+                }
+                a {
+                    font-size: 18px;
+                }
+            }
+            .p-header__nav-list:nth-child(1) {
+                margin-top: 60px;
+                @include mixin.pc {
+                    margin-top: 0;
+                }
+            }
+            .p-header__nav-list:nth-child(5) {
+                margin-bottom: 60px;
+                @include mixin.pc {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__nav-pc {
         display: none;
         @include mixin.pc {
-            display: flex;
-            margin: 54px 0 0 0;
+            display: block;
         }
-        &-list {
-            margin: 0 35px;
-            a {
-                font-size: 18px;
+        .p-header__nav-box {
+            background-color: #E9F2F4;
+            @include mixin.pc {
+                display: flex;
+                margin: 54px 0 0 0;
+            }
+            .p-header__nav-list {
+                @include mixin.pc {
+                    margin: 0 35px;
+                }
+                a {
+                    font-size: 18px;
+                }
             }
         }
         .separation {
             position: relative;
         }
         .separation::before {
-            content: ""; 
-            display: block;
-            width: 1.5px; 
-            height: 46px; 
-            background-color: #000000; 
-            position: absolute;
-            top: -9px;
-            left: -35px; 
+            display: none;
+            @include mixin.pc {
+                content: ""; 
+                display: block;
+                width: 1.5px; 
+                height: 46px; 
+                background-color: #000000; 
+                position: absolute;
+                top: -9px;
+                left: -35px; 
+            }
         }
     }
     &__tell-box {

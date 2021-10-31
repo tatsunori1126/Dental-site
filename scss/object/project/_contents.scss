@@ -6,9 +6,14 @@
     &-sub {
         margin: 0 20px;
         text-align: center;
+        padding-bottom: 17px;
+        @include mixin.tab {
+            margin: 0 50px;
+        }
         @include mixin.pc {
             max-width: 1440px;
             margin: 0 auto;
+            padding-bottom: 0;
         }
         .section-contents-title {
             font-size: 22px;
@@ -24,8 +29,12 @@
             display: grid;
             justify-content: center;
             grid-template-columns: 150px 150px;
-            grid-template-rows: 237px 237px 237px 237px;
+            grid-template-rows: 287px 287px 287px 287px;
             gap: 34px;
+            @include mixin.tab {
+                grid-template-columns: 40% 40%;
+                grid-template-rows: 250px 250px 250px 250px;
+            }
             @include mixin.pc {
                 grid-template-columns: 211px 211px 211px 211px;
                 grid-template-rows: 281px 281px 0;
@@ -40,6 +49,9 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    @include mixin.tab {
+                        margin: 0 auto;
+                    }
                     @include mixin.pc {
                         width: 211px;
                         height: 211px;
@@ -58,9 +70,15 @@
                 .p-main__contents-text {
                     font-size: 14px;
                     line-height: 25px;
+                    text-align: left;
+                    margin-top: 12px;
+                    @include mixin.tab {
+                        text-align: center;
+                    }
                     @include mixin.pc {
                         font-size: 15px;
                         margin-bottom: 80px;
+                        margin-top: 0;
                     }
                 }
             }

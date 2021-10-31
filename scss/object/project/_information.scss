@@ -10,6 +10,11 @@
         text-align: center;
         background-image: url(/images/811926\ 1.png);
         background-position: center top 243px;
+        @include mixin.tab {
+            margin: 0 50px;
+            background-position: center top 215px;
+            background-size: 40%;
+        }
         @include mixin.pc {
             max-width: 1440px;
             margin: 0 auto;
@@ -42,6 +47,9 @@
             height: auto;
             object-fit: cover;
             margin-bottom: 42px;
+            @include mixin.tab {
+                width: 40%;
+            }
             @include mixin.pc {
                 width: 35%;
                 margin-bottom: 85px;
@@ -51,14 +59,16 @@
             font-size: 14px;
             line-height: 28px;
             text-align: left;
-            @include mixin.pc {
-                text-align: center;
+            @include mixin.tab {
                 font-size: 16px;
+                text-align: center;
+            }
+            @include mixin.pc {
                 line-height: 32px;
             }
             br {
                 display: none;
-                @include mixin.pc {
+                @include mixin.mid {
                     display: block;
                 }
             }
@@ -78,6 +88,9 @@
             margin-top: 40px;
             margin-bottom: 37px;
             font-size: 14px;
+            @include mixin.tab {
+                width: 35%;
+            }
             @include mixin.pc {
                 width: 27%;
                 margin-top: 35px;

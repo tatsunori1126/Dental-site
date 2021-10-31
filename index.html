@@ -15,23 +15,37 @@
     <header class="l-header">
         <div class="p-header">
             <h1 class="p-header__title-logo"><a href="#"><img src="/images/アイコン.png" alt="メインロゴ"></a></h1>
-            <ul class="p-header__nav">
-                <li class="p-header__nav-list"><a href="#">当院について</a></li>
-                <li class="p-header__nav-list separation"><a href="#">診療内容</a></li>
-                <li class="p-header__nav-list separation"><a href="#">当院の特徴</a></li>
-                <li class="p-header__nav-list separation"><a href="#">医師紹介</a></li>
-                <li class="p-header__nav-list separation"><a href="#">アクセス</a></li>
-            </ul>
+            <div class="p-header__nav-res">
+                <ul class="p-header__nav-box">
+                    <li class="p-header__nav-list"><a href="#">当院について</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">診療内容</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">当院の特徴</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">医師紹介</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">アクセス</a></li>
+                </ul>
+            </div>
+            <div class="p-header__nav-pc">
+                <ul class="p-header__nav-box">
+                    <li class="p-header__nav-list"><a href="#">当院について</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">診療内容</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">当院の特徴</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">医師紹介</a></li>
+                    <li class="p-header__nav-list separation"><a href="#">アクセス</a></li>
+                </ul>
+            </div>
             <div class="p-header__tell-box">
                 <a href="#" class="tell-number"><i class="fas fa-phone-alt"></i>012-3456-7890</a>
                 <p class="business-hours"><i class="far fa-clock"></i>9:00-14:00/15:30-19:00</p>
             </div>
         </div>
+        <button type="button" class="btn js-btn">
+            <span class="btn-line"></span>
+        </button>
     </header>
     <main class="l-main">
         <div class="p-main">
             <div class="p-main__top-visual">
-                <h2 class="p-main__top-text">痛み<span>を</span>抑えた治療。<br>あなた<span>の</span>健康<span>を</span>歯<span>から</span>守る。</h2>
+                <h2 class="p-main__top-text">痛み<span>を</span>抑えた治療。<br>あなた<span>の</span>健康<span>を</span><br class="br-sp">歯<span>から</span>守る。</h2>
                 <div class="p-main__top-table">
                     <table>
                         <tr class="reception-time">
@@ -58,6 +72,7 @@
                     </div>
                 </section>
                 <section class="p-main__feature">
+                    <div class="p-main__feature-background"></div>
                     <div class="p-main__feature-sub">
                         <h3 class="section-feature-title">当院の特徴</h3>
                         <div class="p-main__feature-box">
@@ -183,8 +198,10 @@
                 <div class="p-main__access-box">
                     <div class="p-main__access-map">
                         <img src="/images/架空歯科クリニック.png" alt="ロゴタイトル">
-                        <p class="p-main__address">〒123-4567　住所が入ります住所が入ります</p>
-                        <p class="p-main__access-text">アクセス : ○○駅から徒歩8分<br>駐車場 : 15台</p>
+                        <div class="p-main__access-map-group">
+                            <p class="p-main__address">〒123-4567　住所が入ります住所が入ります</p>
+                            <p class="p-main__access-text">アクセス : ○○駅から徒歩8分<br>駐車場 : 15台</p>
+                        </div>
                         <a href="#"><i class="fas fa-map-marker-alt"></i>Googleマップを開く</a>
                     </div>
                     <div class="p-main__access-table">
@@ -242,5 +259,6 @@
             </div>
         </div>
     </footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>

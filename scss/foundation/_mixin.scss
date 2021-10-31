@@ -1,6 +1,8 @@
 @charset "UTF-8";
 $pc: 1412px;    //パソコン
 $tab: 600px;    //タブレット
+$sub: 800px;
+$mid: 1240px;
 
 // パソコン
 @mixin pc {
@@ -11,6 +13,18 @@ $tab: 600px;    //タブレット
 // タブレット
 @mixin tab {
     @media (min-width: ($tab)) {    //画面サイズが600px〜1411pxの間の場合、タブレット画面になる
+        @content;
+    }
+}
+
+@mixin sub {
+    @media (min-width: ($tab)) {    
+        @content;
+    }
+}
+
+@mixin mid {
+    @media (min-width: ($tab)) {    
         @content;
     }
 }

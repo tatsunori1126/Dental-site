@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@use "../foundation/mixin";
 .l-main {
     width: 100%;
+    padding-top: 70px;
+    @include mixin.pc {
+        padding-top: 0;
+    }
 }
