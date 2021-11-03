@@ -1,30 +1,28 @@
 @charset "UTF-8";
-$pc: 1412px;    //パソコン
 $tab: 600px;    //タブレット
-$sub: 800px;
-$mid: 1240px;
+$mid: 1000px;
+$sub: 1200px;
+$pc: 1412px;    //パソコン
 
-// パソコン
-@mixin pc {
-    @media (min-width: ($pc)) {     //画面サイズが1412px以上の場合、pc画面になる
-        @content;
-    }
-}
 // タブレット
 @mixin tab {
     @media (min-width: ($tab)) {    //画面サイズが600px〜1411pxの間の場合、タブレット画面になる
         @content;
     }
 }
-
-@mixin sub {
-    @media (min-width: ($tab)) {    
+@mixin mid {
+    @media (min-width: ($mid)) {     
         @content;
     }
 }
-
-@mixin mid {
-    @media (min-width: ($tab)) {    
+@mixin sub {
+    @media (min-width: ($sub)) {     
+        @content;
+    }
+}
+// パソコン
+@mixin pc {
+    @media (min-width: ($pc)) {     //画面サイズが1412px以上の場合、pc画面になる
         @content;
     }
 }

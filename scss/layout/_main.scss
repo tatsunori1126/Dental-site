@@ -2,7 +2,7 @@
 @use "../foundation/mixin";
 .l-main {
     width: 100%;
-    padding-top: 70px;
+    padding-top: 54px;
     @include mixin.pc {
         padding-top: 0;
     }

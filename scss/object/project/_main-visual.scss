@@ -6,9 +6,10 @@
         background-image: url(/images/Rectangle\ 2.png);
         background-size: cover;
         background-position: center;
-        // position: relative;
+        position: relative;
         height: 471px;
         width: 100%;
+        z-index: 10;
         @include mixin.pc {
             height: 760px;
             background-position: inherit;
@@ -73,7 +74,7 @@
                         height: 56px;
                     }
                     .space {
-                        width: 100px;
+                        width: 125px;
                         @include mixin.pc {
                             width: 150px;
                         }
@@ -109,24 +110,54 @@
             }
         }
     }
-    // &__top-visual::before {
-    //     background-image: url(/images/Vector\ 16.png);
-    //     background-position: top;
-    //     bottom: 0;
-    //     content: '';
-    //     left: 0;
-    //     height: 100%;
-    //     position: absolute;
-    //     width: 100%;
-    // }
-    // &__top-visual::after {
-    //     background-image: url(/images/wave.svg);
-    //     background-position: bottom;
-    //     bottom: 0;
-    //     content: '';
-    //     left: 0;
-    //     height: 100%;
-    //     position: absolute;
-    //     width: 100%;
-    // }
+    &__top-visual::before {
+        background-image: url(/images/Vector\ 16.png);
+        background-position: top;
+        background-size: contain;
+        content: '';
+        top: 37px;
+        left: 0;
+        height: 23%;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        @include mixin.tab {
+            top: 33px;
+        }
+        @include mixin.mid {
+            top: 12px;
+        }
+        @include mixin.sub {
+            top: 12px;
+        }
+        @include mixin.pc {
+            position: absolute;
+            top: -43px;
+        }
+    }
+    &__top-visual::after {
+        background-image: url(/images/Vector\ 18.png);
+        background-position: bottom;
+        background-size: contain;
+        bottom: -13px;
+        content: '';
+        left: 0;
+        height: 30%;
+        position: absolute;
+        width: 100%;
+        z-index: -10;
+        @include mixin.tab {
+            background-image: url(/images/Vector\ 14.png);
+            bottom: -31px;
+        }
+        @include mixin.mid {
+            bottom: -52px;
+        }
+        @include mixin.sub {
+            bottom: -70px;
+        }
+        @include mixin.pc {
+            bottom: -48px;
+        }
+    }
 }

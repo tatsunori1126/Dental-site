@@ -3,6 +3,11 @@
 .p-footer {
     width: 100%;
     background-color: #E9F2F4;
+    position: relative;
+    z-index: 0;
+    @include mixin.pc {
+        position: relative;
+    }
     &__sub {
         margin: 0 20px;
         @include mixin.tab {
@@ -69,8 +74,9 @@
                 }
             }
             .p-footer__tell-box {
+                font-family: "Hiragino Kaku Gothic Pro";
                 @include mixin.tab {
-                    width: 35%;
+                    width: 100%;
                     margin: 0 auto;
                 }
                 @include mixin.pc {
@@ -87,9 +93,13 @@
                     height: 50px;
                     line-height: 50px;
                     box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.15);
+                    @include mixin.tab {
+                        width: 45%;
+                        font-size: 14px;
+                    }
                     @include mixin.pc {
                         margin: 25px 140px 19px 0;
-                        font-size: 20px;
+                        font-size: 15px;
                         height: 48px;
                         line-height: 48px;
                         padding: 0 53px;
@@ -103,6 +113,9 @@
                         font-weight: 900;
                         color: #000;    //カラーを指定しないとアイコンが透過されて見えない
                         margin-right: 30px;
+                        @include mixin.tab {
+                            margin-right: 10px;
+                        }
                         @include mixin.pc {
                             margin-right: 8px;
                         }
@@ -114,7 +127,7 @@
                     padding-bottom: 26px;
                     @include mixin.pc {
                         font-size: 18px;
-                        margin: 0 0 71px 28px;
+                        margin: 0 0 71px 15px;
                         letter-spacing: 0.04em;
                         text-align: left;
                         padding-bottom: 0;
@@ -150,5 +163,24 @@
                  
             }
         }
+    }
+}
+.p-footer::before {
+    content: "";
+    background-image: url(/images/Vector\ 16-footer.png);
+    background-position: top;
+    background-size: contain;
+    height: 40%;
+    width: 100%;
+    top: -21px;
+    left: 0;
+    position: absolute;
+    z-index: -10;
+    @include mixin.tab {
+        top: -50px;
+    }
+    @include mixin.pc {
+        background-size: cover;
+        top: -67px;
     }
 }

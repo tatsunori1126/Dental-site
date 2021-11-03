@@ -3,6 +3,8 @@
 .p-main__contents {
     width: 100%;
     background-color: #E9F2F4;
+    position: relative;
+    z-index: -100;
     &-sub {
         margin: 0 20px;
         text-align: center;
@@ -21,7 +23,7 @@
             margin-bottom: 44px;
             @include mixin.pc {
                 margin-bottom: 50px;
-                padding-top: 48px;
+                padding-top: 0;
                 font-size: 27px;
             }
         }
@@ -80,8 +82,53 @@
                         margin-bottom: 80px;
                         margin-top: 0;
                     }
+                    br {
+                        display: none;
+                        @include mixin.tab {
+                            display: block;
+                        }
+                    }
                 }
             }
         }
+    }
+}
+.p-main__contents::before {
+    content: "";
+    background-image: url(/images/Vector\ 14.png);
+    background-position: top;
+    background-size: contain;
+    height: 30%;
+    width: 100%;
+    top: -24px;
+    left: 0;
+    position: absolute;
+    z-index: -10;
+    @include mixin.tab {
+        top: -50px;
+    }
+    @include mixin.pc {
+        top: -100px;
+    }
+}
+.p-main__contents::after {
+    content: "";
+    background-image: url(/images/Vector\ 15.png);
+    background-position: bottom;
+    background-size: contain;
+    height: 30%;
+    width: 100%;
+    bottom: -22px;
+    left: 0;
+    position: absolute;
+    z-index: -10;
+    @include mixin.tab {
+        bottom: -55px;
+    }
+    @include mixin.mid {
+        bottom: -60px;
+    }
+    @include mixin.pc {
+        bottom: -82px;
     }
 }
