@@ -422,6 +422,10 @@ body {
 }
 .p-header__nav-res .p-header__nav-box .p-header__nav-list a {
   font-size: 18px;
+  transition: 0.2s;
+}
+.p-header__nav-res .p-header__nav-box .p-header__nav-list a:hover {
+  color: #51A8BB;
 }
 .p-header__nav-res .p-header__nav-box .p-header__nav-list:nth-child(1) {
   margin-top: 60px;
@@ -463,6 +467,10 @@ body {
 }
 .p-header__nav-pc .p-header__nav-box .p-header__nav-list a {
   font-size: 18px;
+  transition: 0.2s;
+}
+.p-header__nav-pc .p-header__nav-box .p-header__nav-list a:hover {
+  color: #51A8BB;
 }
 .p-header__nav-pc .separation {
   position: relative;
@@ -798,11 +806,15 @@ body {
 }
 .p-footer__sub .p-footer__block .p-footer__nav-list a {
   font-size: 14px;
+  transition: 0.2s;
 }
 @media (min-width: 1412px) {
   .p-footer__sub .p-footer__block .p-footer__nav-list a {
     font-size: 18px;
   }
+}
+.p-footer__sub .p-footer__block .p-footer__nav-list a:hover {
+  color: #51A8BB;
 }
 .p-footer__sub .p-footer__block .p-footer__nav .p-footer__separation {
   position: relative;
@@ -1093,11 +1105,6 @@ body {
   white-space: nowrap;
   font-size: 15px;
 }
-@media (min-width: 1412px) {
-  .p-main__feature-sub .p-main__feature-box .p-main__feature-block .p-main__feature-text {
-    font-size: 1vw;
-  }
-}
 .p-main__feature-sub .p-main__feature-box .p-main__feature-block img {
   margin-top: 20px;
 }
@@ -1229,6 +1236,10 @@ body {
     margin-bottom: 0;
   }
 }
+.p-main__feature-sub .p-main__feature-btn:hover {
+  color: #FFFFFF;
+  background-color: #51A8BB;
+}
 
 article {
   position: relative;
@@ -1347,6 +1358,7 @@ article {
   font-size: 14px;
   position: relative;
   z-index: 20;
+  transition: 0.3s;
 }
 @media (min-width: 600px) {
   .p-main__information-block .p-main__information-detail {
@@ -1360,6 +1372,10 @@ article {
     margin-bottom: 25px;
     font-size: 16px;
   }
+}
+.p-main__information-block .p-main__information-detail:hover {
+  color: #FFFFFF;
+  background-color: #51A8BB;
 }
 .p-main__information-block::after {
   content: "";
@@ -1693,6 +1709,8 @@ article {
   color: #FFFFFF;
   font-size: 14px;
   margin: 25px 0 55px 0;
+  transition: 0.3s;
+  opacity: 0.8;
 }
 @media (min-width: 600px) {
   .p-main__access-sub .p-main__access-box .p-main__access-map a {
@@ -1712,6 +1730,9 @@ article {
   font-weight: 900;
   color: #FFFFFF;
   margin-right: 10px;
+}
+.p-main__access-sub .p-main__access-box .p-main__access-map a:hover {
+  opacity: 1;
 }
 .p-main__access-sub .p-main__access-box .p-main__access-table {
   display: inline-block;
@@ -1976,6 +1997,29 @@ article {
 .btn-line.open::after {
   transform: rotate(-45deg);
   /* 下の線を傾ける */
+}
+
+/* fadeUp */
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定 */
+.up-slide {
+  opacity: 0;
 }
 
 /* ==========================================================================

@@ -109,6 +109,8 @@
                     color: #FFFFFF;
                     font-size: 14px;
                     margin: 25px 0 55px 0;
+                    transition: 0.3s;
+                    opacity: 0.8;
                     @include mixin.tab {
                         width: 35%;
                     }
@@ -124,6 +126,9 @@
                         color: #FFFFFF;    //カラーを指定しないとアイコンが透過されて見えない
                         margin-right: 10px;
                     }
+                }
+                a:hover {
+                    opacity: 1;
                 }
             }
             .p-main__access-table {
@@ -292,3 +297,4 @@
         }
     }
 }
+
